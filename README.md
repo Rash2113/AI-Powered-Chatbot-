@@ -24,16 +24,19 @@ This project delivers an **AI-Powered Chatbot** designed to simplify querying su
 ## Technologies Used
 
 ### **Backend**
+
 - **Python** (Flask/FastAPI)
 - **LangGraph Framework**
 - **Open-Source LLMs** (Hugging Face GPT-2, GPT-3, LLaMA 2)
 
 ### **Frontend**
+
 - **React** (with Material UI or Tailwind CSS)
 - **Axios** (for API calls)
 - **State Management** (Redux/Context API)
 
 ### **Database**
+
 - **MySQL/PostgreSQL**
 
 ---
@@ -43,15 +46,18 @@ This project delivers an **AI-Powered Chatbot** designed to simplify querying su
 ### **Chatbot Workflow**
 
 1. **User Query**:
+
    - Users input natural language queries like:
-     - *"Show me all products under brand X."*
-     - *"Which suppliers provide laptops?"*
-     - *"Give me details of product ABC."*
+     - _"Show me all products under brand X."_
+     - _"Which suppliers provide laptops?"_
+     - _"Give me details of product ABC."_
 
 2. **Data Retrieval**:
+
    - LangGraph nodes interact with the database to fetch relevant supplier or product information.
 
 3. **LLM Summarization**:
+
    - Supplier data and contextual information are summarized using an open-source LLM.
 
 4. **Response Generation**:
@@ -74,19 +80,23 @@ This project delivers an **AI-Powered Chatbot** designed to simplify querying su
 ### **Backend Setup**
 
 1. Clone the repository:
+
    ```bash
-   https://github.com/anurag8773/AI-Powered-Chatbot
+   https://github.com/Rash2113/AI-Powered-Chatbot-
    ```
 
 2. Install backend dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 3. Configure the database:
+
    - Update `config.py` with your database credentials.
 
 4. Initialize the database:
+
    ```bash
    python manage.py db_init
    ```
@@ -101,11 +111,13 @@ This project delivers an **AI-Powered Chatbot** designed to simplify querying su
 ### **Frontend Setup**
 
 1. Navigate to the frontend directory:
+
    ```bash
    cd ../frontend
    ```
 
 2. Install frontend dependencies:
+
    ```bash
    npm install
    ```
@@ -120,23 +132,25 @@ This project delivers an **AI-Powered Chatbot** designed to simplify querying su
 ## Database Schema
 
 ### **Products Table**
-| Field       | Type        | Description                    |
-|-------------|-------------|--------------------------------|
-| ID          | Integer (PK)| Unique identifier for products |
-| Name        | String      | Product name                  |
-| Brand       | String      | Brand name                   |
-| Price       | Decimal     | Product price                |
-| Category    | String      | Product category             |
-| Description | Text        | Product description          |
-| Supplier ID | Integer (FK)| Linked supplier identifier    |
+
+| Field       | Type         | Description                    |
+| ----------- | ------------ | ------------------------------ |
+| ID          | Integer (PK) | Unique identifier for products |
+| Name        | String       | Product name                   |
+| Brand       | String       | Brand name                     |
+| Price       | Decimal      | Product price                  |
+| Category    | String       | Product category               |
+| Description | Text         | Product description            |
+| Supplier ID | Integer (FK) | Linked supplier identifier     |
 
 ### **Suppliers Table**
-| Field        | Type        | Description                      |
-|--------------|-------------|----------------------------------|
-| ID           | Integer (PK)| Unique identifier for suppliers  |
-| Name         | String      | Supplier name                   |
-| Contact Info | String      | Contact information             |
-| Categories   | String      | Product categories offered      |
+
+| Field        | Type         | Description                     |
+| ------------ | ------------ | ------------------------------- |
+| ID           | Integer (PK) | Unique identifier for suppliers |
+| Name         | String       | Supplier name                   |
+| Contact Info | String       | Contact information             |
+| Categories   | String       | Product categories offered      |
 
 ---
 
